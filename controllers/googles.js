@@ -10,7 +10,7 @@ passport.use(
 		{
 			clientID: GOOGLE_CLIENT_ID,
 			clientSecret: GOOGLE_CLIENT_SECRET,
-			callbackURL: GOOGLE_CALLBACK_URL,
+			callbackURL: `${GOOGLE_CALLBACK_URL}`,
 		},
 		async function (accessToken, refreshToken, profile, cb) {
 			let existingUser = await User.findOne({ providerId: profile.id });
@@ -35,5 +35,6 @@ passport.use(
 		}
    )
 );
+
 
 module.exports = passport;
