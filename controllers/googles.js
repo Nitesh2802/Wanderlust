@@ -36,5 +36,22 @@ passport.use(
    )
 );
 
+<<<<<<< HEAD
 
 module.exports = passport;
+=======
+// Serialize user to store in session
+passport.serializeUser((user, done) => {
+    done(null, user.id);
+});
+
+// Deserialize user from session
+passport.deserializeUser((id, done) => {
+    User.findById(id, (err, user) => {
+        done(err, user);
+    });
+});
+
+
+module.exports = passport;
+>>>>>>> b42d4b9ef474d85a1adc9c86517a6d370a19e838
