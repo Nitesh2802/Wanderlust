@@ -20,7 +20,7 @@
 //     const options = {
 //       amount: amount,
 //       currency: "INR",
-//       receipt: `receipt_${new Date().getTime()}`, //we can generate by using some uuid and so on;
+//       receipt: "razorUser@gmail.com",
 //     };
 
 //     razorpayInstance.orders.create(options, (err, order) => {
@@ -33,9 +33,9 @@
 //           key_id: RAZORPAY_ID_KEY,
 //           product_name: req.body.name,
 //           description: req.body.description,
-//           contact: "9795063101",
-//           name: "Nitesh Kumar",
-//           email: "nitesh123@gmail.com",
+//           contact: "9339828230",
+//           name: "MD Affan Asghar",
+//           email: "mdaffanasghar15@gmail.com",
 //         });
 //       } else {
 //         res.status(400).send({ success: false, msg: "Something went wrong!" });
@@ -45,6 +45,7 @@
 //     console.log(error.message);
 //   }
 // };
+
 // module.exports = {
 //   renderProductPage,
 //   createOrder,
