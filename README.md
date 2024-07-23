@@ -5,7 +5,7 @@ Wanderlust is a comprehensive full stack web application designed to enhance the
 
 ## Screenshots
 
-![App Screenshot](https://github.com/Nitesh2802/Wanderlust/blob/main/public/images/Screenshot%20(1830).png?raw=true)
+![App Screenshot](https://github.com/Nitesh2802/Wanderlust/blob/main/public/images/Screenshot%20(1857).png?raw=true)
 
 
 ## Live Project
