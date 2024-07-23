@@ -94,7 +94,7 @@ app.get("/listings/:id/reviewedit",(req,res) => {
 });
 
 // --- Google oauth ---
- app.use("/auth/google", googleRoute);
+app.use("/auth/google", googleRoute);
 
 // -- Twitter auth ---
 

@@ -3,14 +3,15 @@ const User = require("../models/user.js");
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
-const GOOGLE_CALLBACK_URL = process.env.GOOGLE_CALLBACK_URL;
+// const GOOGLE_CALLBACK_URL = process.env.GOOGLE_CALLBACK_URL;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 passport.use(
 	new GoogleStrategy(
 		{
 			clientID: GOOGLE_CLIENT_ID,
 			clientSecret: GOOGLE_CLIENT_SECRET,
-			callbackURL: `${GOOGLE_CALLBACK_URL}`,
+			callbackURL: "https://wanderlust-67ck.onrender.com/auth/google/callback",
+			passReqToCallback:true
 		},
 		async function (accessToken, refreshToken, profile, cb) {
 			let existingUser = await User.findOne({ providerId: profile.id });
@@ -36,10 +37,6 @@ passport.use(
    )
 );
 
-<<<<<<< HEAD
-
-module.exports = passport;
-=======
 // Serialize user to store in session
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -54,4 +51,3 @@ passport.deserializeUser((id, done) => {
 
 
 module.exports = passport;
->>>>>>> b42d4b9ef474d85a1adc9c86517a6d370a19e838
