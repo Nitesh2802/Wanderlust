@@ -9,7 +9,7 @@ Wanderlust is a comprehensive full stack web application designed to enhance the
 
 
 ## Live Project
-Check out the live project: https://wanderlust-sey6.onrender.com
+Check out the live project: https://wanderlust-67ck.onrender.com
 ## Technologies Used:
 
  - Node.js
